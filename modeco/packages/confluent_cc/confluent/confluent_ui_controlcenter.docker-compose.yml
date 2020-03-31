@@ -1,0 +1,26 @@
+---
+version: '3'
+services:
+
+# START SERVICE nginx.rewrite
+  nginx:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.nginx.rewrite:1.17.3
+    environment: ['CONTECO_NGINX_CONF_LOCATION=/confluent/confluent/controlcenter', 'CONTECO_NGINX_CONF_PROXY_PASS=confluent_confluent_controlcenter:9021']
+    command: []
+    volumes: []
+    ports: []
+    networks: [modeco_overlay, confluent_overlay]
+    deploy:
+      mode: replicated
+      resources:
+        limits:
+          cpus: '${CONFLUENT_UI_CONTROLCENTER_DEPLOY_RESOURCES_LIMITS_CPUS}'
+          memory: '${CONFLUENT_UI_CONTROLCENTER_DEPLOY_RESOURCES_LIMITS_MEMORY}'
+        reservations:
+          cpus: '${CONFLUENT_UI_CONTROLCENTER_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
+          memory: '${CONFLUENT_UI_CONTROLCENTER_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+      labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.confluent_confluent_nginx.loadbalancer.server.port=80, traefik.http.routers.confluent_confluent_nginx.entrypoints=conteco, traefik.http.routers.confluent_confluent_nginx.rule=PathPrefix("/confluent/confluent/controlcenter")]
+# END SERVICE nginx.rewrite
+
+volumes: {}
+networks: {modeco_overlay: { external: true }, confluent_overlay: { external: true }}
