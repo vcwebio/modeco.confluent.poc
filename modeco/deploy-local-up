@@ -59,7 +59,7 @@ if [[ "confluent_metrics_overlay_metrics_overlay_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create confluent_metrics_overlay_metrics_overlay_volume
 	fi
 	
-if [[ "confluent_streamsets_streamsets_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create confluent_streamsets_streamsets_volume
+if [[ "confluent_processor_streamsets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create confluent_processor_streamsets_volume
 	fi
 	

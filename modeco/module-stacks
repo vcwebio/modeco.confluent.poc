@@ -8,6 +8,6 @@ start/stop,ingest,ingest_data,ingest_data
 boot/shutdown,kcsz,kcsz,kcsz
 boot/shutdown,ksqldb,ksql,ksql
 start/stop,metrics_overlay,metrics_overlay,metrics_overlay
-boot/shutdown,streamsets,streamsets,streamsets
-start/stop,streamsets,streamsets,streamsets_ui_streamsets
+boot/shutdown,streamsets,processor,processor
+start/stop,streamsets,processor,processor_ui_streamsets
 
