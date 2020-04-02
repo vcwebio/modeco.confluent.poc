@@ -5,6 +5,8 @@ start/stop,ekg,ekg,ekg_rest_elasticsearch
 start/stop,ekg,ekg,ekg_ui_grafana
 start/stop,ekg,ekg,ekg_ui_kibana
 start/stop,ingest,ingest_data,ingest_data
+boot/shutdown,kafka_rest,kafka_rest,kafka_rest
+start/stop,kafka_rest,kafka_rest,kafka_rest_ext_rest
 boot/shutdown,kcsz,kcsz,kcsz
 boot/shutdown,ksqldb,ksql,ksql
 start/stop,metrics_overlay,metrics_overlay,metrics_overlay
