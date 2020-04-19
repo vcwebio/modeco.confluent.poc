@@ -8,7 +8,7 @@ start/stop,ingest,ingest_data,ingest_data
 boot/shutdown,kafka_rest,kafka_rest,kafka_rest
 start/stop,kafka_rest,kafka_rest,kafka_rest_ext_rest
 boot/shutdown,kcsz,kcsz,kcsz
-boot/shutdown,ksqldb,ksql,ksql
+boot/shutdown,ksql,ksql,ksql
 start/stop,metrics_overlay,metrics_overlay,metrics_overlay
 boot/shutdown,streamsets,processor,processor
 start/stop,streamsets,processor,processor_ui_streamsets
