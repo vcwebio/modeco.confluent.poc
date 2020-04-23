@@ -15,6 +15,22 @@ if [[ "confluent_ingest_data_filebeat_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create confluent_ingest_data_filebeat_volume
 	fi
 	
+if [[ "confluent_kafka_connect_kafka_connect_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create confluent_kafka_connect_kafka_connect_secrets_volume
+	fi
+	
+if [[ "confluent_kafka_connect_kafka_connect_connect_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create confluent_kafka_connect_kafka_connect_connect_secrets_volume
+	fi
+	
+if [[ "confluent_kafka_connect_kafka_connect_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create confluent_kafka_connect_kafka_connect_data_volume
+	fi
+	
+if [[ "confluent_kafka_connect_kafka_connect_jars_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create confluent_kafka_connect_kafka_connect_jars_volume
+	fi
+	
 if [[ "confluent_kz_kafka_secrets_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create confluent_kz_kafka_secrets_volume
 	fi
