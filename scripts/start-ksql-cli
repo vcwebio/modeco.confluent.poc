@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "This is the script to start the KSQL CLI"

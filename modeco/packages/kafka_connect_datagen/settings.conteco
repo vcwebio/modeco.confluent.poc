@@ -2,6 +2,7 @@
 
 # START CONFIGURATION
 export CONTECO_DC_GLOBAL_PACKAGE_CONTECO="module.kafka_connect_datagen"
+export CONTECO_DC_GLOBAL_PACKAGE_TAG="0.2.0-5.4.0"
 export CONTECO_DC_GLOBAL_STACKNAMES="conteco_dc_kafka_connect_datagen,conteco_dc_kafka_connect_datagen_ext_rest"
 export CONTECO_DC_GLOBAL_BOOTSTACKS="conteco_dc_kafka_connect_datagen"
 export CONTECO_DC_GLOBAL_RUNSTACKS="conteco_dc_kafka_connect_datagen_ext_rest"

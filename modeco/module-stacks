@@ -17,3 +17,4 @@ boot/shutdown,schema_registry,schema_registry,schema_registry
 start/stop,schema_registry,schema_registry,schema_registry_ext_rest
 boot/shutdown,streamsets,processor,processor
 start/stop,streamsets,processor,processor_ui_streamsets
+
