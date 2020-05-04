@@ -2,10 +2,11 @@
 
 # START CONFIGURATION
 export CONTECO_DC_GLOBAL_PACKAGE_CONTECO="filebeat.base"
+export CONTECO_DC_GLOBAL_PACKAGE_TAG="7.1.1"
 export CONTECO_DC_GLOBAL_STACKNAMES="ingest_data"
 export CONTECO_DC_GLOBAL_BOOTSTACKS=""
 export CONTECO_DC_GLOBAL_RUNSTACKS="ingest_data"
-export CONTECO_DC_GLOBAL_VOLUME_LIST="confluent_ingest_data_filebeat_volume"
+export CONTECO_DC_GLOBAL_VOLUME_LIST="confluent_poc_ingest_data_filebeat_volume"
 export CONTECO_DC_GLOBAL_VOLUME_INITIALISED=""
 # END CONFIGURATION
 
