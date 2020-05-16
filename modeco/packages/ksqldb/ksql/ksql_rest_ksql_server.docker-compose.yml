@@ -5,7 +5,7 @@ services:
 # START SERVICE nginx.rewrite
   nginx:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.nginx.rewrite:1.17.3
-    environment: ['CONTECO_NGINX_CONF_LOCATION=/confluent/ksql/rest', 'CONTECO_NGINX_CONF_PROXY_PASS=confluent_ksql_ksql_server:8088']
+    environment: ['CONTECO_NGINX_CONF_LOCATION=/confluent/ksql/rest', 'CONTECO_NGINX_CONF_PROXY_PASS=confluent_poc_ksql_ksql_server:8088']
     command: []
     volumes: []
     ports: []
@@ -19,7 +19,7 @@ services:
         reservations:
           cpus: '${KSQL_REST_KSQL_SERVER_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${KSQL_REST_KSQL_SERVER_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.confluent_ksql_nginx.loadbalancer.server.port=80, traefik.http.routers.confluent_ksql_nginx.entrypoints=conteco, traefik.http.routers.confluent_ksql_nginx.rule=PathPrefix("/confluent/ksql/rest")]
+      labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.confluent_poc_ksql_nginx.loadbalancer.server.port=80, traefik.http.routers.confluent_poc_ksql_nginx.entrypoints=conteco, traefik.http.routers.confluent_poc_ksql_nginx.rule=PathPrefix("/confluent/ksql/rest")]
 # END SERVICE nginx.rewrite
 
 volumes: {}

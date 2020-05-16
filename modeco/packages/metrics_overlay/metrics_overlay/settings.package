@@ -6,7 +6,7 @@ export CONTECO_DC_GLOBAL_PACKAGE_TAG="7.1.1"
 export CONTECO_DC_GLOBAL_STACKNAMES="metrics_overlay"
 export CONTECO_DC_GLOBAL_BOOTSTACKS=""
 export CONTECO_DC_GLOBAL_RUNSTACKS="metrics_overlay"
-export CONTECO_DC_GLOBAL_VOLUME_LIST="confluent_metrics_overlay_metrics_overlay_volume"
+export CONTECO_DC_GLOBAL_VOLUME_LIST="confluent_poc_metrics_overlay_metrics_overlay_volume"
 export CONTECO_DC_GLOBAL_VOLUME_INITIALISED=""
 # END CONFIGURATION
 

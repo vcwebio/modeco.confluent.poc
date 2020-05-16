@@ -5,7 +5,7 @@ services:
 # START SERVICE nginx.rewrite
   nginx:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.nginx.rewrite:1.17.3
-    environment: ['CONTECO_NGINX_CONF_LOCATION=/confluent/ekg/elasticsearch', 'CONTECO_NGINX_CONF_PROXY_PASS=confluent_ekg_elasticsearch:9200']
+    environment: ['CONTECO_NGINX_CONF_LOCATION=/confluent/ekg/elasticsearch', 'CONTECO_NGINX_CONF_PROXY_PASS=confluent_poc_ekg_elasticsearch:9200']
     command: []
     volumes: []
     ports: []
@@ -19,7 +19,7 @@ services:
         reservations:
           cpus: '${EKG_REST_ELASTICSEARCH_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${EKG_REST_ELASTICSEARCH_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.confluent_ekg_elasticsearch.loadbalancer.server.port=80, traefik.http.routers.confluent_ekg_elasticsearch.entrypoints=conteco, traefik.http.routers.confluent_ekg_elasticsearch.rule=PathPrefix("/confluent/ekg/elasticsearch")]
+      labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.confluent_poc_ekg_elasticsearch.loadbalancer.server.port=80, traefik.http.routers.confluent_poc_ekg_elasticsearch.entrypoints=conteco, traefik.http.routers.confluent_poc_ekg_elasticsearch.rule=PathPrefix("/confluent/ekg/elasticsearch")]
 # END SERVICE nginx.rewrite
 
 volumes: {}

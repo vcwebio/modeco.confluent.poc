@@ -2,10 +2,10 @@
 version: '3'
 services:
 
-# START SERVICE ksql_server.base
+# START SERVICE ksqldb_server.base
   ksql_server:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.ksql_server.base:5.4.0
-    environment: ['KSQL_BOOTSTRAP_SERVERS=${KSQL_KSQL_BOOTSTRAP_SERVERS}','KSQL_KSQL_SERVICE_ID=${KSQL_KSQL_KSQL_SERVICE_ID}'${KSQL_MODE}]
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.ksqldb_server.base:0.9.0
+    environment: ['KSQL_BOOTSTRAP_SERVERS=${KSQL_KSQL_BOOTSTRAP_SERVERS}','KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE=true','KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE=true','KSQL_KSQL_SERVICE_ID=${KSQL_KSQL_KSQL_SERVICE_ID}'${KSQL_MODE}]
     command: []
     volumes: []
     ports: [${KSQL_PORTS}]
@@ -20,7 +20,7 @@ services:
           cpus: '${KSQL_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${KSQL_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
       labels: [${KSQL_DEPLOY_LABELS}]
-# END SERVICE ksql_server.base
+# END SERVICE ksqldb_server.base
 
 volumes: {}
 networks: {confluent_overlay: { external: true }}

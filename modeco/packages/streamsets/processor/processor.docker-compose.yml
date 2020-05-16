@@ -7,7 +7,7 @@ services:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.streamsets.base:3.10.1
     environment: ['SDC_JAVA_OPTS=-Xmx${PROCESSOR_DEPLOY_RESOURCES_RESERVATIONS_MEMORY} -Xms${PROCESSOR_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}']
     command: []
-    volumes: ['confluent_processor_streamsets_volume:/data']
+    volumes: ['confluent_poc_processor_streamsets_volume:/data']
     ports: []
     networks: [confluent_overlay]
     deploy:
@@ -22,5 +22,5 @@ services:
       labels: [${PROCESSOR_DEPLOY_LABELS}]
 # END SERVICE streamsets.base
 
-volumes: {confluent_processor_streamsets_volume: { external: true }}
+volumes: {confluent_poc_processor_streamsets_volume: { external: true }}
 networks: {confluent_overlay: { external: true }}
