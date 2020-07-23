@@ -1,7 +1,7 @@
 - type: http
   id: external_kafka_connect_endpoint
   name: Kafka Connect External
-  hosts: ["http://${CONTECO_HOSTNAME}:${MODECO_KAFKA_CONNECT_ENDPOINT_PORT}"]
+  hosts: ["http://${CONTECO_HOSTNAME}:"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:

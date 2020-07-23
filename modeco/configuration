@@ -1,24 +1,5 @@
 #!/usr/bin/env bash
 
-##### START MOULE CONFIGURATION SETUP #####
-DOLLAR='$'
-export MODECO_HOSTNAME="${DOLLAR}{CONTECO_HOSTNAME}"
-
-export MODECO_CONFIGURATION_KEYS='\
-$MODECO_HOSTNAME,\
-$MODECO_MODULEPREFIX,\
-$MODECO_URLPREFIX,'
-export MODECO_CONFIGURATION_FILES="\
-metrics_monitor_heartbeat_monitors_volume/confluent_cc.yml,\
-metrics_monitor_heartbeat_monitors_volume/ekg.yml,\
-metrics_monitor_heartbeat_monitors_volume/kafka_connect.yml,\
-metrics_monitor_heartbeat_monitors_volume/kafka_rest.yml,\
-metrics_monitor_heartbeat_monitors_volume/ksql_server.yml,\
-metrics_monitor_heartbeat_monitors_volume/kz.yml,\
-metrics_monitor_heartbeat_monitors_volume/schema_registry.yml,\
-metrics_monitor_heartbeat_monitors_volume/streamsets.yml"
-##### END MOULE CONFIGURATION SETUP #####
-
 ##### START MOULE CONFIGURATION KEYVALUES #####
 export MODECO_CONFLUENT_CONTROL_CENTER_PORT="9021"
 export MODECO_KAFKA_CONNECT_KAFKA_CONNECT_ENDPOINT_PORT="8083"
