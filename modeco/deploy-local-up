@@ -11,14 +11,6 @@ if [[ "module_confluent_poc_ekg_grafana_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_confluent_poc_ekg_grafana_volume
 	fi
 	
-if [[ "module_confluent_poc_metrics_monitor_heartbeat_data_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create module_confluent_poc_metrics_monitor_heartbeat_data_volume
-	fi
-	
-if [[ "module_confluent_poc_metrics_monitor_heartbeat_monitors_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create module_confluent_poc_metrics_monitor_heartbeat_monitors_volume
-	fi
-	
 if [[ "module_confluent_poc_ingest_data_filebeat_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_confluent_poc_ingest_data_filebeat_volume
 	fi
@@ -57,6 +49,14 @@ if [[ "module_confluent_poc_kz_zookeeper_data_volume" == "$prefix"* ]] ; then
 	
 if [[ "module_confluent_poc_kz_zookeeper_log_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_confluent_poc_kz_zookeeper_log_volume
+	fi
+	
+if [[ "module_confluent_poc_metrics_monitor_heartbeat_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create module_confluent_poc_metrics_monitor_heartbeat_data_volume
+	fi
+	
+if [[ "module_confluent_poc_metrics_monitor_heartbeat_monitors_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create module_confluent_poc_metrics_monitor_heartbeat_monitors_volume
 	fi
 	
 if [[ "module_confluent_poc_metrics_overlay_metrics_overlay_volume" == "$prefix"* ]] ; then

@@ -12,6 +12,7 @@ start/stop,kafka_rest,kafka_rest,kafka_rest_ext_rest
 boot/shutdown,ksqldb,ksql,ksql
 start/stop,ksqldb,ksql,ksql_rest_ksql_server
 boot/shutdown,kz_server,kz,kz
+start/stop,metrics_monitor,metrics_monitor,metrics_monitor
 start/stop,metrics_overlay,metrics_overlay,metrics_overlay
 boot/shutdown,schema_registry,schema_registry,schema_registry
 start/stop,schema_registry,schema_registry,schema_registry_ext_rest
