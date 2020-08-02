@@ -34,20 +34,6 @@ if [[ "module_confluent_poc_ekg_grafana_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "module_confluent_poc_ingest_data_filebeat_volume" == "$prefix"* ]] ; then
-		continue="true"
-		while [[ "true" == "$continue" ]] ;
-		do
-			executionplane docker volume rm "module_confluent_poc_ingest_data_filebeat_volume"
-			result=$(docker volume ls | grep "module_confluent_poc_ingest_data_filebeat_volume")
-			if [[ "$result" == "" ]] ; then
-				continue="false"
-			else
-				sleep 3;
-			fi
-		done;
-	fi
-	
 if [[ "module_confluent_poc_kafka_connect_kafka_connect_secrets_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;

@@ -11,10 +11,6 @@ if [[ "module_confluent_poc_ekg_grafana_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_confluent_poc_ekg_grafana_volume
 	fi
 	
-if [[ "module_confluent_poc_ingest_data_filebeat_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create module_confluent_poc_ingest_data_filebeat_volume
-	fi
-	
 if [[ "module_confluent_poc_kafka_connect_kafka_connect_secrets_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_confluent_poc_kafka_connect_kafka_connect_secrets_volume
 	fi

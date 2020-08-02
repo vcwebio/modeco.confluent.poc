@@ -1,6 +1,5 @@
 ekg_elasticsearch_volume
 ekg_grafana_volume
-ingest_data_filebeat_volume
 kafka_connect_kafka_connect_secrets_volume
 kafka_connect_kafka_connect_connect_secrets_volume
 kafka_connect_kafka_connect_data_volume
